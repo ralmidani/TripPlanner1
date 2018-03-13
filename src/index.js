@@ -1,4 +1,7 @@
 const mapboxgl = require('mapbox-gl');
+const buildMarker = require('./marker');
+
+console.log(buildMarker);
 
 mapboxgl.accessToken = "pk.eyJ1IjoiaG9ndXRpZXIiLCJhIjoiY2plcTJvemk1MDBjbTMzcDlkZG9sNHd5bCJ9.qdZGyVIUxfOob3IUAfCMaw";
 
@@ -17,5 +20,7 @@ markerDomEl.style.height = "39px";
 markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)"; */
 
 new mapboxgl.Marker().setLngLat([-74.009151, 40.705086]).addTo(map);
+
+buildMarker('hotel', [-74.009151, 40.707086]).addTo(map);
 
 
