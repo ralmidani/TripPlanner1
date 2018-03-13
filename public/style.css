@@ -1,65 +1,83 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #C1B5AD;
-  }
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #C1B5AD;
+  font-size: 14px;
+}
 
+#map {
+  height: 90vh;
+  width: 75%;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.navbar {
+  background-color: darkorange;
+  height: 10vh;
+  padding: 5px;
+  min-height: 40px;
+  width: 100vw;
+}
+
+#logo {
+  font-family: Anton;
+  font-size: 2em;
+  padding-top: 0.5em;
+}
+
+.main{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.controls {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 25%;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.aroundtown {
+  height: 35vh;
+  width: auto;
+  background-color: tan;
+}
+
+.itinerary {
+  height: 45vh;
+  width: auto;
+  background-color: limegreen;
+}
+
+.itinerary .header {
+  background-color: orange;
+  font-size: 1em;
+  min-height: 55px
+  height: 15%;
+  padding: 8px;
+}
+
+@media (max-width: 800px){
+  .main {
+    flex-direction: column;
+  }
   #map {
-    height: 90vh;
-    width: 75%;
-
+    height: 50vh;
   }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+  #map, .controls {
+    width: 100%;
   }
-
-  .navbar {
-    background-color: darkorange;
-    height: 10vh;
-    width: 100vw;
-  }
-
-  .main{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-
-  .controls {
-    flex-direction: column;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 25%;
-    justify-content: space-between;
-  }
-
-  .aroundtown {
-    height: 35vh;
-    width: auto;
-    background-color: tan;
-  }
-
-  .itinerary {
-    height: 45vh;
-    width: auto;
-    background-color: limegreen;
-  }
-
-  .itinerary .header {
-    background-color: orange;
-    font-size: 24px;
-    height: 15%;
-    padding: 15px;
-  }
-
-  @media (max-width: 600px){
-
-  }
-
+}
